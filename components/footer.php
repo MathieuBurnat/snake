@@ -1,3 +1,1 @@
-<?php
-echo "footer"
-?>
+<h3> Footer's section </h3>
