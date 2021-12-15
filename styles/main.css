@@ -1,0 +1,5 @@
+@import "./variables.css";
+
+.bg-main{
+    background-color: var(--p1);
+}
