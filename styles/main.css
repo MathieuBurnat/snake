@@ -3,3 +3,7 @@
 .bg-main{
     background-color: var(--p1);
 }
+
+h1{
+    background-color: var(--p4);
+}

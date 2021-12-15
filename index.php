@@ -12,7 +12,7 @@
 <?php include("./components/header.php"); ?>
 
 <body class="bg-main">
-    <h1 class="text-3xl font-bold underline bg-emerald-400">
+    <h1 class="text-3xl font-bold underline">
         Sneaky Snake 
     </h1>
 
