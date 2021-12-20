@@ -15,6 +15,10 @@
     background-color: var(--p3);
 }
 
+.bg-third-content{
+    background-color: var(--p2);
+}
+
 /* Default Button */
 .bg-button{
     background-color: var(--p3);
