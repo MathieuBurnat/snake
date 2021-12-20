@@ -45,8 +45,20 @@
 
     function launchMenu() {
         console.log("Open menu");
+
+        let animation = anime({
+            targets: '.menu',
+            // Properties 
+            translateX: 200,
+            borderRadius: 50,
+            // Property Parameters
+            duration: 500,
+            easing: 'linear',
+            // Animation Parameters
+            direction: 'reverse'
+        });
     }
-    
+
     function closeMenu() {
         console.log("close menu");
     }
