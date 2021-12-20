@@ -1,4 +1,4 @@
-<div class="flex bg-content h-16 text-center align-self items-center">
+<div class="flex bg-main-content h-16 text-center align-self items-center">
     <div class="flex-none w-14">
         Snake
     </div>
