@@ -8,6 +8,10 @@
     background-color: var(--p5);
 }
 
+.bg-button{
+    background-color: var(--p3);
+}
+
 h1{
     background-color: var(--p4);
 }
