@@ -6,8 +6,8 @@
     <title>Snake</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
 </head>
-
 
 <!-- Include the header -->
 <?php include("./components/header.php"); ?>
@@ -23,5 +23,4 @@
 <style>
     @import "styles/main.css";
 </style>
-
 </html>
