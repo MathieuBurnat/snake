@@ -16,7 +16,7 @@
 </div>
 
 <!-- Header's menu -->
-<div class="menu h-screen w-40 float-right bg-third-content">
+<div class="menu h-screen w-40 float-right bg-third-content" style="opacity: 0;">
     <div id="closeMenu" class="cross p-5">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
@@ -44,9 +44,13 @@
     $('#closeMenu').click(function () { closeMenu(); });
 
     function launchMenu() {
-        console.log("Open menu");
+        anime({
+            targets: '.menu',
+            opacity: 1,
+            duration: 100,
+        });
 
-        let animation = anime({
+        anime({
             targets: '.menu',
             // Properties 
             translateX: 200,
