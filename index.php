@@ -8,6 +8,9 @@
     <script src="libs/pixi.min.js"></script>
 </head>
 
+<style>
+    @import "styles/main.css";
+</style>
 
 <!-- Include the header -->
 <?php include("./components/header.php"); ?>
@@ -19,9 +22,5 @@
 
 <!-- Include the footer -->
 <?php include("./components/footer.php"); ?>
-
-<style>
-    @import "styles/main.css";
-</style>
 
 </html>

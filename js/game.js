@@ -13,6 +13,10 @@ const fruit = new PIXI.Graphics();
 let apple;
 let gameState = "playing";
 
+const style = getComputedStyle(document.body);
+const colorNames = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'apple'];
+const colors = Object.assign( {}, ...colorNames.map(c => ({ [c]: Number("0x" + style.getPropertyValue(`--${c}`).substring(1)) })) );
+
 const snake = {
     parts : [
         {x: 3, y: 3},
@@ -83,7 +87,7 @@ const spawnApple = () => {
     } while(!isPointInSnake(apple));
 
     fruit.clear();
-    fruit.beginFill(0xFF0000);
+    fruit.beginFill(colors.apple);
     fruit.drawCircle(x * GRID_S + GRID_S / 2, y * GRID_S + GRID_S / 2, GRID_S/2 - 2);
     fruit.endFill();
 }
@@ -110,7 +114,7 @@ document.querySelector("#gameSection").appendChild(app.view);
 // Draw grid
 for(let x = 0; x < GRID_W; x++) {
     for(let y = 0; y < GRID_H; y++) {
-        background.beginFill(0x95D5B2, 1);
+        background.beginFill(colors.p2, 1);
         background.drawRect(x * GRID_S + 3, y * GRID_S + 3, GRID_S - 3, GRID_S - 3);
     }
 }
@@ -129,7 +133,7 @@ app.ticker.add((delta) => {
     // Draw player
     player.clear();
     for(let [key, part] of Object.entries(snake.parts)) {
-        player.beginFill(0x1B4332, 1);
+        player.beginFill(colors.p7, 1);
         let partSize = key == 0 ? 0 : (key / snake.parts.length) * 9;
         player.drawCircle(part.x * GRID_S + GRID_S / 2, part.y * GRID_S + GRID_S / 2, GRID_S / 2 - partSize);
     }
