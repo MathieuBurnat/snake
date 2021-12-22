@@ -3,7 +3,7 @@
         Snake
     </div>
     <div class="grow">
-        <a href="play" class="rounded-md bg-button px-8 py-1">Play</a>
+        <a href="#" id="play-button" class="rounded-md bg-button px-8 py-1">Play</a>
     </div>
     <div class="flex-none w-14">
         Menu?Info

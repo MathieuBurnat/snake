@@ -1,5 +1,9 @@
 @import "./variables.css";
 
+body {
+    overflow-x: clip;
+}
+
 /* Background Body */
 .bg-body{
     background-color: var(--p1);
