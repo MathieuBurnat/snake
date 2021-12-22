@@ -14,8 +14,24 @@
 
 <body class="bg-body">
     <!-- Game Content -->
-    <?php include("./components/game.php"); ?>
 </body>
+
+<?php
+    switch(htmlspecialchars($_GET["page"])){
+        case "learn":
+            include("./screens/learn.php");
+            break; 
+        case "about":
+            include("./screens/about.php");
+            break; 
+        case "help":
+            include("./screens/help.php");
+            break;
+        default:
+            include("./components/game.php");
+            break; 
+    }
+?>
 
 <!-- Include the footer -->
 <?php include("./components/footer.php"); ?>

@@ -4,7 +4,7 @@
         Snake
     </div>
     <div class="grow">
-        <a href="play" class="rounded-md bg-button px-8 py-1">Play</a>
+        <a href="/" class="rounded-md bg-button px-8 py-1">Play</a>
     </div>
     <div class="flex-none w-14">
         <svg xmlns="http://www.w3.org/2000/svg" id="openMenu" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -27,13 +27,13 @@
 
     <div class="text-center">
         <div class="p-6">
-            <a href="#about">About Us</a>
+            <a href="?page=about">About Us</a>
         </div>
         <div class="p-6">
-            <a href="#learn">How to play</a>
+            <a href="?page=learn">How to play</a>
         </div>
         <div class="p-6">
-            <a href="#help">Send Help</a>
+            <a href="?page=help">Send Help</a>
         </div>
 
     </div>
