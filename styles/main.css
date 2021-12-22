@@ -1,7 +1,23 @@
 @import "./variables.css";
 
-.bg-main{
+/* Background Body */
+.bg-body{
     background-color: var(--p1);
+}
+
+/* Background for important content*/
+.bg-main-content{
+    background-color: var(--p5);
+}
+
+/* Background for secondary items */
+.bg-secondary-content{
+    background-color: var(--p3);
+}
+
+/* Default Button */
+.bg-button{
+    background-color: var(--p3);
 }
 
 h1{

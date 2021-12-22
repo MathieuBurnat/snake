@@ -12,11 +12,7 @@
 <!-- Include the header -->
 <?php include("./components/header.php"); ?>
 
-<body class="bg-main">
-    <h1 class="text-3xl font-bold underline">
-        Sneaky Snake 
-    </h1>
-
+<body class="bg-body">
     <!-- Game Content -->
     <?php include("./components/game.php"); ?>
 </body>
