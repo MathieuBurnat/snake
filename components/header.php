@@ -26,13 +26,13 @@
     </div>
 
     <div class="text-center">
-        <div class="p-6">
+        <div class="p-6 menuItem">
             <a href="?page=about">About Us</a>
         </div>
-        <div class="p-6">
+        <div class="p-6 menuItem">
             <a href="?page=learn">How to play</a>
         </div>
-        <div class="p-6">
+        <div class="p-6 menuItem">
             <a href="?page=help">Send Help</a>
         </div>
 
@@ -44,6 +44,12 @@
     $('#closeMenu').click(function () { closeMenu(); });
 
     function launchMenu() {
+        /* Add typewriter effect */
+        var items = document.getElementsByClassName('menuItem');
+        for(var i = 0; i < items.length; i++){
+            items[i].className += ' typewriter';
+        }
+
         anime({
             targets: '.menu',
             opacity: 1,
