@@ -4,7 +4,7 @@
         Snake
     </div>
     <div class="grow">
-        <a href="/" class="rounded-md bg-button px-8 py-1">Play</a>
+        <a href="#" id="play-button" class="rounded-md bg-button px-8 py-1">Play</a>
     </div>
     <div class="flex-none w-14">
         <svg xmlns="http://www.w3.org/2000/svg" id="openMenu" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

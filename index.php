@@ -9,13 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="libs/pixi.min.js"></script>
 </head>
+<link href="styles/main.css" rel="stylesheet" type="text/css" />
 
 <!-- Include the header -->
 <?php include("./components/header.php"); ?>
-
-<body class="bg-body">
-    <!-- Game Content -->
-</body>
 
 <?php
     switch(htmlspecialchars($_GET["page"])){
@@ -36,8 +33,4 @@
 
 <!-- Include the footer -->
 <?php include("./components/footer.php"); ?>
-
-<style>
-    @import "styles/main.css";
-</style>
 </html>
