@@ -64,6 +64,10 @@
     }
 
     function closeMenu() {
-        console.log("close menu");
+        anime({
+            targets: '.menu',
+            opacity: 0,
+            duration: 2000,
+        });
     }
 </script>
