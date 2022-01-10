@@ -6,6 +6,8 @@ const UPDATE_FREQ = 10;
 
 let lastUpdate = 0;
 
+let app;
+
 const background = new PIXI.Graphics();
 const player = new PIXI.Graphics();
 const fruit = new PIXI.Graphics();
@@ -17,7 +19,7 @@ let gameState = "waitForStart";
 
 const style = getComputedStyle(document.body);
 const colorNames = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'apple'];
-const colors = Object.assign( {}, ...colorNames.map(c => ({ [c]: Number("0x" + style.getPropertyValue(`--${c}`).substring(1)) })) );
+let colors = {};
 
 const playButton = document.getElementById("play-button");
 const timerSpan = document.getElementById("stats-timer");
@@ -138,70 +140,72 @@ const hideMessage = () => {
 }
 
 const init = () => {
-    displayMessage("Press the 'Play' button to begin");
+    app = new PIXI.Application({ 
+        antialias: true, 
+        transparent: true,
+        width: 600,
+        heigth: 600,
+    });
+    document.querySelector("#gameSection").appendChild(app.view);
+
+    colors = Object.assign( {}, ...colorNames.map(c => ({ [c]: Number("0x" + style.getPropertyValue(`--${c}`).substring(1)) })) );
+
+    // Draw grid
+    for(let x = 0; x < GRID_W; x++) {
+        for(let y = 0; y < GRID_H; y++) {
+            background.beginFill(colors.p2, 1);
+            background.drawRect(x * GRID_S + 3, y * GRID_S + 3, GRID_S - 3, GRID_S - 3);
+        }
+    }
+
+    app.ticker.add((delta) => {
+        if(gameState != "playing")
+            return;
+
+        lastUpdate += delta;
+        stats.timer += app.ticker.elapsedMS;
+
+        if(lastUpdate > UPDATE_FREQ) {
+            lastUpdate = 0;
+            snake.updatePosition();
+        }
+
+        // Draw player
+        player.clear();
+        for(let [key, part] of Object.entries(snake.parts)) {
+            player.beginFill(colors.p7, 1);
+            let partSize = key == 0 ? 0 : (key / snake.parts.length) * 9;
+            player.drawCircle(part.x * GRID_S + GRID_S / 2, part.y * GRID_S + GRID_S / 2, GRID_S / 2 - partSize);
+        }
+
+        // Update stats display
+        timerSpan.innerHTML = Math.floor((stats.timer/1000)/60) + ":" + String(Math.floor((stats.timer/1000)%60)).padStart(2, '0');
+        applesSpan.innerHTML = stats.applesEaten;
+    });
+
+    document.addEventListener('keydown', (ev) => {
+        const directions = {'ArrowRight': 'right', 'ArrowLeft': 'left', 'ArrowUp': 'up', 'ArrowDown': 'down'};
+
+        if(ev.key in directions) 
+            snake.setDirection(directions[ev.key]);
+
+        if(gameState == "playing" && lastUpdate > UPDATE_FREQ*0.66) {
+            snake.updatePosition();
+            lastUpdate = 0;
+        }
+    });
+
+    playButton.addEventListener('click', () => { 
+        beginGame();
+        playButton.innerHTML = "Restart";
+    });
+
+    app.stage.addChild(background);
+    app.stage.addChild(player);
+    app.stage.addChild(fruit);
     app.stage.addChild(messageLabel);
+
+    displayMessage("Press the 'Play' button to begin");
 }
 
-const app = new PIXI.Application({ 
-    antialias: true, 
-    transparent: true,
-    width: 600,
-    heigth: 600,
-});
-document.querySelector("#gameSection").appendChild(app.view);
-
-// Draw grid
-for(let x = 0; x < GRID_W; x++) {
-    for(let y = 0; y < GRID_H; y++) {
-        background.beginFill(colors.p2, 1);
-        background.drawRect(x * GRID_S + 3, y * GRID_S + 3, GRID_S - 3, GRID_S - 3);
-    }
-}
-
-app.ticker.add((delta) => {
-    if(gameState != "playing")
-        return;
-
-    lastUpdate += delta;
-    stats.timer += app.ticker.elapsedMS;
-
-    if(lastUpdate > UPDATE_FREQ) {
-        lastUpdate = 0;
-        snake.updatePosition();
-    }
-
-    // Draw player
-    player.clear();
-    for(let [key, part] of Object.entries(snake.parts)) {
-        player.beginFill(colors.p7, 1);
-        let partSize = key == 0 ? 0 : (key / snake.parts.length) * 9;
-        player.drawCircle(part.x * GRID_S + GRID_S / 2, part.y * GRID_S + GRID_S / 2, GRID_S / 2 - partSize);
-    }
-
-    // Update stats display
-    timerSpan.innerHTML = Math.floor((stats.timer/1000)/60) + ":" + String(Math.floor((stats.timer/1000)%60)).padStart(2, '0');
-    applesSpan.innerHTML = stats.applesEaten;
-});
-
-document.addEventListener('keydown', (ev) => {
-    const directions = {'ArrowRight': 'right', 'ArrowLeft': 'left', 'ArrowUp': 'up', 'ArrowDown': 'down'};
-
-    if(ev.key in directions) 
-        snake.setDirection(directions[ev.key]);
-
-    if(gameState == "playing" && lastUpdate > UPDATE_FREQ*0.66) {
-        snake.updatePosition();
-        lastUpdate = 0;
-    }
-});
-
-playButton.addEventListener('click', () => { 
-    beginGame();
-    playButton.innerHTML = "Restart";
-});
-
-app.stage.addChild(background);
-app.stage.addChild(player);
-app.stage.addChild(fruit);
-
-init();
+document.addEventListener('DOMContentLoaded', init);
