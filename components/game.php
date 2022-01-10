@@ -1,4 +1,4 @@
-<div id="gameSection">
+<div id="gameSection" class="w-fit m-auto">
     <h3> Game's section </h3>
     <div>
         <span>Apples eaten: <span id="stats-apples">0</span></span>
