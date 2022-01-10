@@ -15,7 +15,7 @@
 <?php include("./components/header.php"); ?>
 
 <?php
-    switch(htmlspecialchars($_GET["page"])){
+    switch(htmlspecialchars($_GET["page"] ?? '')){
         case "learn":
             include("./screens/learn.php");
             break; 
