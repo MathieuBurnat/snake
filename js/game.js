@@ -148,7 +148,7 @@ const init = () => {
     });
     document.querySelector("#gameSection").appendChild(app.view);
 
-    colors = Object.assign( {}, ...colorNames.map(c => ({ [c]: Number("0x" + style.getPropertyValue(`--${c}`).substring(1)) })) );
+    colors = Object.assign( {}, ...colorNames.map(c => ({ [c]: Number("0x" + style.getPropertyValue(`--${c}`).trim().substring(1)) })) );
 
     // Draw grid
     for(let x = 0; x < GRID_W; x++) {
