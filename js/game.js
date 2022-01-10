@@ -10,6 +10,8 @@ const background = new PIXI.Graphics();
 const player = new PIXI.Graphics();
 const fruit = new PIXI.Graphics();
 
+const messageLabel = new PIXI.Text("");
+
 let apple;
 let gameState = "waitForStart";
 
@@ -113,12 +115,31 @@ const beginGame = () => {
         applesEaten: 0,
         timer: 0,
     };
+    hideMessage();
     spawnApple();
 }
 
 const gameOver = () => {
     gameState = "gameover";
     playButton.innerHTML = "Retry";
+    displayMessage("                 Game Over!\nPress the 'Retry' button to try again");
+}
+
+const displayMessage = (message) => { 
+    messageLabel.text = message;
+    messageLabel.visible = true;
+    messageLabel.y = (600 - messageLabel.height) / 2;
+    messageLabel.x = (600 - messageLabel.width) / 2;
+}
+
+const hideMessage = () => { 
+    messageLabel.visible = false;
+    messageLabel.text = "";
+}
+
+const init = () => {
+    displayMessage("Press the 'Play' button to begin");
+    app.stage.addChild(messageLabel);
 }
 
 const app = new PIXI.Application({ 
@@ -182,3 +203,5 @@ playButton.addEventListener('click', () => {
 app.stage.addChild(background);
 app.stage.addChild(player);
 app.stage.addChild(fruit);
+
+init();
