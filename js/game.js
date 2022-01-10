@@ -148,6 +148,8 @@ const init = () => {
     });
     document.querySelector("#gameSection").appendChild(app.view);
 
+    playButton.setAttribute("href", "#");
+
     colors = Object.assign( {}, ...colorNames.map(c => ({ [c]: Number("0x" + style.getPropertyValue(`--${c}`).trim().substring(1)) })) );
 
     // Draw grid
