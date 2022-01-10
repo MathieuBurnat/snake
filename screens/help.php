@@ -1,3 +1,3 @@
-<body class="bg-body">
+<div>
     <h1>Help's section</h1>
-</body>
+</div>

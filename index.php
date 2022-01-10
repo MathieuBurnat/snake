@@ -11,10 +11,11 @@
 </head>
 <link href="styles/main.css" rel="stylesheet" type="text/css" />
 
-<!-- Include the header -->
-<?php include("./components/header.php"); ?>
+<body class="overflow-hidden bg-body">
+    <!-- Include the header -->
+    <?php include("./components/header.php"); ?>
 
-<?php
+    <?php
     switch(htmlspecialchars($_GET["page"] ?? '')){
         case "learn":
             include("./screens/learn.php");
@@ -30,7 +31,10 @@
             break; 
     }
 ?>
+</body>
+
 
 <!-- Include the footer -->
 <?php include("./components/footer.php"); ?>
+
 </html>
