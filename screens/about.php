@@ -21,8 +21,8 @@
           </div>
         </div>
         <div class="flip-card-back">
-          <h1>John Doe</h1>
-          <p>Architect & Engineer</p>
+          <h1>Dimitri H</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui ea officiis natus excepturi quae! Iure dicta dolor sint nemo? Quod neque aperiam id officia. Amet, in! Eveniet debitis dolor nisi.</p>
           <p>We love that guy</p>
         </div>
       </div>
@@ -41,9 +41,9 @@
           </div>
         </div>
         <div class="flip-card-back">
-          <h1>John Doe</h1>
+          <h1>Mathieu B</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, dolor asperiores voluptate doloremque a dignissimos quos, aut expedita accusantium impedit ducimus tempora! Fuga modi architecto eligendi. Nostrum, debitis cum! A.</p>
           <p>Architect & Engineer</p>
-          <p>We love that guy</p>
         </div>
       </div>
     </div>
@@ -90,15 +90,9 @@
     backface-visibility: hidden;
   }
 
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-
   /* Style the back side */
   .flip-card-back {
-    background-color: dodgerblue;
+    background-color: var(--p4);
     color: white;
     transform: rotateY(180deg);
   }
