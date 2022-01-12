@@ -18,12 +18,17 @@ let apple;
 let gameState = "waitForStart";
 
 const style = getComputedStyle(document.body);
-const colorNames = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'apple'];
+const colorNames = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'apple', 'button'];
 let colors = {};
 
 const playButton = document.getElementById("play-button");
 const timerSpan = document.getElementById("stats-timer");
 const applesSpan = document.getElementById("stats-apples");
+
+const touchButtonLeft = new PIXI.Graphics();
+const touchButtonRight = new PIXI.Graphics();
+const touchButtonUp = new PIXI.Graphics();
+const touchButtonDown = new PIXI.Graphics();
 
 let stats = {
     score: 0,
@@ -139,6 +144,25 @@ const hideMessage = () => {
     messageLabel.text = "";
 }
 
+const resizeCanvas = (size) => {
+    app.renderer.resize(size, size);
+    app.stage.scale.set(size/600, size/600);
+} 
+
+const hideTouchButtons = () => {
+    touchButtonLeft.visible = false;
+    touchButtonRight.visible = false;
+    touchButtonUp.visible = false;
+    touchButtonDown.visible = false;
+}
+
+const showTouchButtons = () => {
+    touchButtonLeft.visible = true;
+    touchButtonRight.visible = true;
+    touchButtonUp.visible = true;
+    touchButtonDown.visible = true;
+}
+
 const init = () => {
     app = new PIXI.Application({ 
         antialias: true, 
@@ -159,6 +183,31 @@ const init = () => {
             background.drawRect(x * GRID_S + 3, y * GRID_S + 3, GRID_S - 3, GRID_S - 3);
         }
     }
+
+
+    // Draw touch buttons
+    const TOUCH_BUTTON_R = GRID_S * 1.66;
+
+    touchButtonLeft.beginFill(colors.button, 1);
+    touchButtonLeft.drawCircle(600 - 3*TOUCH_BUTTON_R + TOUCH_BUTTON_R/3, 600 - 2*TOUCH_BUTTON_R + TOUCH_BUTTON_R/3, TOUCH_BUTTON_R/2, TOUCH_BUTTON_R/2);
+    touchButtonLeft.endFill();
+    touchButtonLeft.alpha = 0.5;
+
+    touchButtonRight.beginFill(colors.button, 1);
+    touchButtonRight.drawCircle(600 - TOUCH_BUTTON_R + TOUCH_BUTTON_R/3, 600 - 2*TOUCH_BUTTON_R + TOUCH_BUTTON_R/3, TOUCH_BUTTON_R/2, TOUCH_BUTTON_R/2);
+    touchButtonRight.endFill();
+    touchButtonRight.alpha = 0.5;
+
+    touchButtonUp.beginFill(colors.button, 1);
+    touchButtonUp.drawCircle(600 - 2*TOUCH_BUTTON_R + TOUCH_BUTTON_R/3, 600 - 3*TOUCH_BUTTON_R + TOUCH_BUTTON_R/3, TOUCH_BUTTON_R/2, TOUCH_BUTTON_R/2);
+    touchButtonUp.endFill();
+    touchButtonUp.alpha = 0.5;
+
+    touchButtonDown.beginFill(colors.button, 1);
+    touchButtonDown.drawCircle(600 - 2*TOUCH_BUTTON_R + TOUCH_BUTTON_R/3, 600 - TOUCH_BUTTON_R + TOUCH_BUTTON_R/3, TOUCH_BUTTON_R/2, TOUCH_BUTTON_R/2);
+    touchButtonDown.endFill();
+    touchButtonDown.alpha = 0.5;
+
 
     app.ticker.add((delta) => {
         if(gameState != "playing")
@@ -202,10 +251,27 @@ const init = () => {
         playButton.innerHTML = "Restart";
     });
 
+    touchButtonLeft.interactive = true;
+    touchButtonLeft.on('pointerdown', () => snake.setDirection('left'));
+
+    touchButtonRight.interactive = true;
+    touchButtonRight.on('pointerdown', () => snake.setDirection('right'));
+    
+    touchButtonUp.interactive = true;
+    touchButtonUp.on('pointerdown', () => snake.setDirection('up'));
+
+    touchButtonDown.interactive = true;
+    touchButtonDown.on('pointerdown', () => snake.setDirection('down'));
+
     app.stage.addChild(background);
     app.stage.addChild(player);
     app.stage.addChild(fruit);
     app.stage.addChild(messageLabel);
+
+    app.stage.addChild(touchButtonUp);
+    app.stage.addChild(touchButtonDown);
+    app.stage.addChild(touchButtonLeft);
+    app.stage.addChild(touchButtonRight);
 
     displayMessage("Press the 'Play' button to begin");
 }
