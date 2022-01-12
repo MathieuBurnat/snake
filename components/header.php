@@ -16,7 +16,8 @@
 </div>
 
 <!-- Header's menu -->
-<div class="menu h-screen w-80 float-right bg-third-content rounded-l-lg" style="opacity: 0;">
+<div class="menu h-screen w-80 float-right bg-third-content rounded-l-lg"
+    style="opacity: 0; position: fixed; right: 0;">
     <div id="closeMenu" class="cross p-5">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd"
@@ -37,6 +38,7 @@
         </div>
 
     </div>
+
 </div>
 
 <script>
@@ -46,7 +48,7 @@
     function launchMenu() {
         /* Add typewriter effect */
         var items = document.getElementsByClassName('menuItem');
-        for(var i = 0; i < items.length; i++){
+        for (var i = 0; i < items.length; i++) {
             items[i].className += ' typewriter';
         }
 
