@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Snake</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="libs/tailwind.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/anime.min.js"></script>
     <script src="libs/pixi.min.js"></script>
 </head>
 <link href="styles/main.css" rel="stylesheet" type="text/css" />
