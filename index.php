@@ -11,7 +11,7 @@
 </head>
 <link href="styles/main.css" rel="stylesheet" type="text/css" />
 
-<body class="overflow-hidden bg-body">
+<body class="bg-body">
     <!-- Include the header -->
     <?php include("./components/header.php"); ?>
 
@@ -37,4 +37,7 @@
 <!-- Include the footer -->
 <?php include("./components/footer.php"); ?>
 
+<script>
+    import 'animate.css';
+</script>
 </html>
