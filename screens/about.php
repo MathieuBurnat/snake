@@ -24,7 +24,7 @@
               </div>
             </div>
             <div class="flip-card-back">
-              <h1>Dimitri H</h1>
+              <h1>Dimitri I</h1>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui ea officiis natus excepturi quae! Iure
                 dicta dolor sint nemo? Quod neque aperiam id officia. Amet, in! Eveniet debitis dolor nisi.</p>
               <p>We love that guy</p>
