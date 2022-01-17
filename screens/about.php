@@ -9,7 +9,7 @@
     </div>
   </div>
 
-  <div class="flex flex-wrap space-around">
+  <div class="flex flex-wrap space-around" id="cards">
     <div class="flex-auto">
       <div class="flex-wrap">
         <div class="flip-card m-auto">
@@ -61,6 +61,11 @@
 
 
 <style>
+  #cards{
+    animation: fadeInUp;
+    animation-duration: 2s;
+  }
+
   /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
   .flip-card {
     background-color: transparent;

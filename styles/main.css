@@ -43,8 +43,7 @@ h1{
     padding-bottom: 1em;
 
     animation: bounceInRight;
-    animation-duration: 3s; /* don't forget to set a duration! */
-
+    animation-duration: 3s;
 }
 
 .typewriter {
