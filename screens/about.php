@@ -9,7 +9,7 @@
     </div>
   </div>
 
-  <div class="flex">
+  <div class="flex flex-wrap justify-content">
     <div class="flex-auto w-100">
       <div class="flex-wrap">
         <div class="flip-card">
