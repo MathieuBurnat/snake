@@ -1,4 +1,4 @@
-<div>
+<div class="">
   <h1>About Us's section</h1>
   <div class="text">
     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sapiente error similique officiis suscipit cumque
@@ -8,7 +8,7 @@
   </div>
 
   <div class="flex">
-    <div class="flex-1 w-auto">
+    <div class="flex-wrap w-auto">
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">

@@ -33,6 +33,11 @@ h1{
     padding: 1em;
 }
 
+.text{
+    padding-left: 3em;
+    padding-bottom: 1em;
+}
+
 .typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap; /* Keeps the content on a single line */
