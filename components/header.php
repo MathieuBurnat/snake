@@ -16,7 +16,7 @@
 </div>
 
 <!-- Header's menu -->
-<div class="menu h-screen w-80 float-right bg-third-content rounded-l-lg z-50"
+<div id="sideMenu" class="menu h-screen w-80 float-right bg-third-content rounded-l-lg z-50"
     style="opacity: 0; position: fixed; right: 0;">
     <div class="text-center">
         <div class="p-6 menuItem">
@@ -59,6 +59,12 @@
     let sideMenuState = "closed";
 
     $('#openMenu').click(toggleLaunchMenu);
+    $('body').click((evt) => {
+        if(evt.target.id != "openMenu" && $(evt.target).closest('#openMenu').length == 0 
+            && evt.target.id != "sideMenu"  && $(evt.target).closest('#sideMenu').length == 0
+            && sideMenuState == "open")            
+            closeMenu();
+    });
 
     function toggleLaunchMenu() {
         if(sideMenuState == 'closed') {
