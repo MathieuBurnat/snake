@@ -11,6 +11,8 @@ let app;
 const background = new PIXI.Graphics();
 const player = new PIXI.Graphics();
 const fruit = new PIXI.Graphics();
+const fruitSprite = new PIXI.Sprite(PIXI.Texture.from('assets/apple.png'));
+const snakeHead = new PIXI.Sprite(PIXI.Texture.from('assets/snake-head.png'));
 
 const messageLabel = new PIXI.Text("");
 
@@ -18,7 +20,7 @@ let apple;
 let gameState = "waitForStart";
 
 const style = getComputedStyle(document.body);
-const colorNames = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'apple', 'button'];
+const colorNames = ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'apple', 'button', 'snakebody'];
 let colors = {};
 
 const playButton = document.getElementById("play-button");
@@ -107,10 +109,8 @@ const spawnApple = () => {
         apple = {x, y};
     } while(!isPointInSnake(apple));
 
-    fruit.clear();
-    fruit.beginFill(colors.apple);
-    fruit.drawCircle(x * GRID_S + GRID_S / 2, y * GRID_S + GRID_S / 2, GRID_S/2 - 2);
-    fruit.endFill();
+    fruitSprite.x = x * GRID_S;
+    fruitSprite.y = y * GRID_S;
 }
 
 const beginGame = () => {
@@ -176,6 +176,12 @@ const init = () => {
 
     colors = Object.assign( {}, ...colorNames.map(c => ({ [c]: Number("0x" + style.getPropertyValue(`--${c}`).trim().substring(1)) })) );
 
+    snakeHead.anchor.set(0.5, 0.5);
+    snakeHead.scale.set(30/500*1.3);
+
+    fruitSprite.height = 30;
+    fruitSprite.width = 30;
+
     // Draw grid
     for(let x = 0; x < GRID_W; x++) {
         for(let y = 0; y < GRID_H; y++) {
@@ -224,9 +230,17 @@ const init = () => {
         // Draw player
         player.clear();
         for(let [key, part] of Object.entries(snake.parts)) {
-            player.beginFill(colors.p7, 1);
-            let partSize = key == 0 ? 0 : (key / snake.parts.length) * 9;
-            player.drawCircle(part.x * GRID_S + GRID_S / 2, part.y * GRID_S + GRID_S / 2, GRID_S / 2 - partSize);
+            if(key == 0) { 
+                const directions = ["down", "left", "up", "right"];
+                snakeHead.x = part.x * GRID_S + GRID_S/2;
+                snakeHead.y = part.y * GRID_S + GRID_S/2;
+                snakeHead.rotation = Math.PI/2 * directions.findIndex(x => x === snake.direction);
+            }
+            else {
+                player.beginFill(colors.snakebody, 1);
+                let partSize = key == 0 ? 0 : (key / snake.parts.length) * 9;
+                player.drawCircle(part.x * GRID_S + GRID_S / 2, part.y * GRID_S + GRID_S / 2, GRID_S / 2 - partSize);
+            }
         }
 
         // Update stats display
@@ -264,7 +278,9 @@ const init = () => {
     touchButtonDown.on('pointerdown', () => snake.setDirection('down'));
 
     app.stage.addChild(background);
+    player.addChild(snakeHead);
     app.stage.addChild(player);
+    fruit.addChild(fruitSprite);
     app.stage.addChild(fruit);
     app.stage.addChild(messageLabel);
 
