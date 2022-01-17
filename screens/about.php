@@ -9,10 +9,10 @@
     </div>
   </div>
 
-  <div class="flex flex-wrap justify-content">
-    <div class="flex-auto w-100">
+  <div class="flex flex-wrap space-around">
+    <div class="flex-auto">
       <div class="flex-wrap">
-        <div class="flip-card">
+        <div class="flip-card m-auto">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <img
@@ -34,8 +34,8 @@
       </div>
     </div>
 
-    <div class="flex-auto w-100">
-      <div class="flip-card">
+    <div class="flex-auto">
+      <div class="flip-card m-auto">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img src="https://pbs.twimg.com/profile_images/697135903135797248/UcOjql3O_400x400.jpg"
