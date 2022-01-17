@@ -37,4 +37,7 @@
 <!-- Include the footer -->
 <?php include("./components/footer.php"); ?>
 
+<script>
+    import 'animate.css';
+</script>
 </html>
