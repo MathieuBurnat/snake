@@ -38,11 +38,19 @@ h1{
     animation-duration: 2s; /* don't forget to set a duration! */
 }
 
-.text{
+.text-aright{
     padding-left: 3em;
     padding-bottom: 1em;
 
     animation: bounceInRight;
+    animation-duration: 3s;
+}
+
+.text-aleft{
+    padding-left: 3em;
+    padding-bottom: 1em;
+
+    animation: bounceInLeft;
     animation-duration: 3s;
 }
 
