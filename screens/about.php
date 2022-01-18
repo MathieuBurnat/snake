@@ -38,8 +38,8 @@
       <div class="flip-card m-auto">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="https://pbs.twimg.com/profile_images/697135903135797248/UcOjql3O_400x400.jpg"
-              alt="Sneaky Snake" style="height: 300px;">
+            <img src="https://pbs.twimg.com/profile_images/697135903135797248/UcOjql3O_400x400.jpg" alt="Sneaky Snake"
+              style="height: 300px;">
             <div class="py-4 px-4 bg-white">
               <h3 class="text-lg font-semibold text-gray-600">Mathieu</h3>
               <p class="mt-4 text-lg font-thin">Développeur endurcit et passionné de serpent</p>
@@ -61,7 +61,7 @@
 
 
 <style>
-  #cards{
+  #cards {
     animation: fadeInUp;
     animation-duration: 2s;
   }
@@ -107,5 +107,11 @@
     background-color: var(--p4);
     color: white;
     transform: rotateY(180deg);
+  }
+
+  @media (max-width: 600px) {
+    .flip-card {
+      width: 400px; 
+    }
   }
 </style>
