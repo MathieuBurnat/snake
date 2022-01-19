@@ -178,9 +178,13 @@ const init = () => {
 
     snakeHead.anchor.set(0.5, 0.5);
     snakeHead.scale.set(GRID_S/500*1.3);
+    snakeHead.x = -100;
+    snakeHead.y = -100;
 
     fruitSprite.height = GRID_S;
     fruitSprite.width = GRID_S;
+    fruitSprite.x = -100;
+    fruitSprite.y = -100;
 
     // Draw grid
     for(let x = 0; x < GRID_W; x++) {
