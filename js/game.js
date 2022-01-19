@@ -1,6 +1,6 @@
-const GRID_W = 20;
-const GRID_H = 20;
-const GRID_S = 30;
+const GRID_W = 15;
+const GRID_H = 15;
+const GRID_S = 40;
 
 const UPDATE_FREQ = 10;
 
@@ -177,10 +177,10 @@ const init = () => {
     colors = Object.assign( {}, ...colorNames.map(c => ({ [c]: Number("0x" + style.getPropertyValue(`--${c}`).trim().substring(1)) })) );
 
     snakeHead.anchor.set(0.5, 0.5);
-    snakeHead.scale.set(30/500*1.3);
+    snakeHead.scale.set(GRID_S/500*1.3);
 
-    fruitSprite.height = 30;
-    fruitSprite.width = 30;
+    fruitSprite.height = GRID_S;
+    fruitSprite.width = GRID_S;
 
     // Draw grid
     for(let x = 0; x < GRID_W; x++) {
