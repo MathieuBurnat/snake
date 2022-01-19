@@ -114,7 +114,7 @@ const spawnApple = () => {
 }
 
 const beginGame = () => {
-    snake.parts = [{x: 3, y: 3}];
+    snake.parts = [{x: 3, y: 5}, {x: 2, y: 5}, {x: 1, y: 5}];
     snake.direction = 'right';
     gameState = "playing";
     stats = {
