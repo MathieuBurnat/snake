@@ -2,7 +2,7 @@
     <h1>How to play's section</h1>
 
     <div class="text-aleft">
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sapiente error similique officiis suscipit
+        <p> Bienvenue dans la section pour apprendre comment à jouer ! sit amet consectetur adipisicing elit. Quo sapiente error similique officiis suscipit
             cumque
             ab, veritatis alias, placeat commodi dicta maxime nulla quia! Placeat ipsa ut doloremque saepe numquam.
             Lorem
@@ -10,10 +10,10 @@
             provident nisi eum omnis, unde inventore at quas quaerat rerum ipsa totam repudiandae nihil.</p>
     </div>
     <div class="text-aright">
-        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sapiente error similique officiis suscipit
-            cumque
-            ab, veritatis alias, placeat commodi dicta maxime nulla quia! Placeat ipsa ut doloremque saepe numquam.
-            Lorem
+        <p> Pour commencer à jouer, cliquez simplement sur le bouton Play. Il vous suffira d'appuyer sur les touches
+            directionnelles ⬅️ ➡️ ⬇️ ⬆️ afin de faire bouger votre serpent 🐍. Avez-vous compris ? Parfait !
+            Maintenant essayez de manger la pomme ! 🍎
+        </p>
     </div>
 
 
