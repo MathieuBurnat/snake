@@ -99,6 +99,11 @@ const snake = {
     }
 }
 
+const isTouchEnabled = () => 
+    'ontouchstart' in window
+    || navigator.maxTouchPoints > 0
+    || navigator.msMaxTouchPoints > 0;
+
 const spawnApple = () => {
     const isPointInSnake = (point) => !snake.parts.find(p => p.x == point.x && p.y == point.y);
 
@@ -221,6 +226,8 @@ const init = () => {
     touchButtonDown.endFill();
     touchButtonDown.alpha = 0.5;
 
+    if(!isTouchEnabled())
+        hideTouchButtons();
 
     // Draw loop
     app.ticker.add((delta) => {
