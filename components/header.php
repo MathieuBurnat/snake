@@ -17,7 +17,7 @@
 
 <!-- Header's menu -->
 <div id="sideMenu" class="menu h-screen w-80 float-right bg-third-content rounded-l-lg z-50"
-    style="opacity: 0; position: fixed; right: 0;">
+    style="position: fixed; right: 0;">
     <div class="text-center">
         <div class="p-6 menuItem">
             <a href="?page=about">About Us</a>
@@ -44,6 +44,7 @@
         // Animation Parameters
         direction: ''
     });
+    slideOutAnimation.reverse();
 
     const slideInAnimation = anime({
         targets: '.menu',
@@ -54,6 +55,13 @@
         easing: 'easeInQuad',
         // Animation Parameters
         direction: ''
+    });
+    slideInAnimation.reverse();
+
+    anime({
+        targets: '.menu',
+        translateX: [0, '100%'],
+        duration: 1,
     });
 
     let sideMenuState = "closed";
@@ -105,7 +113,7 @@
 </script>
 
 <style>
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         .menu {
             width: 100%;
         }
