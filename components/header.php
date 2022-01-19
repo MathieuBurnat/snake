@@ -35,39 +35,39 @@
 
 <script>
     const slideOutAnimation = anime({
-            targets: '.menu',
-            // Properties 
-            translateX: [400, 0],
-            // Property Parameters
-            duration: 750,
-            easing: 'easeOutQuad',
-            // Animation Parameters
-            direction: ''
+        targets: '.menu',
+        // Properties 
+        translateX: [400, 0],
+        // Property Parameters
+        duration: 750,
+        easing: 'easeOutQuad',
+        // Animation Parameters
+        direction: ''
     });
 
     const slideInAnimation = anime({
-            targets: '.menu',
-            // Properties 
-            translateX: [0, 400],
-            // Property Parameters
-            duration: 300,
-            easing: 'easeInQuad',
-            // Animation Parameters
-            direction: ''
+        targets: '.menu',
+        // Properties 
+        translateX: [0, 400],
+        // Property Parameters
+        duration: 300,
+        easing: 'easeInQuad',
+        // Animation Parameters
+        direction: ''
     });
 
     let sideMenuState = "closed";
 
     $('#openMenu').click(toggleLaunchMenu);
     $('body').click((evt) => {
-        if(evt.target.id != "openMenu" && $(evt.target).closest('#openMenu').length == 0 
-            && evt.target.id != "sideMenu"  && $(evt.target).closest('#sideMenu').length == 0
-            && sideMenuState == "open")            
+        if (evt.target.id != "openMenu" && $(evt.target).closest('#openMenu').length == 0
+            && evt.target.id != "sideMenu" && $(evt.target).closest('#sideMenu').length == 0
+            && sideMenuState == "open")
             closeMenu();
     });
 
     function toggleLaunchMenu() {
-        if(sideMenuState == 'closed') {
+        if (sideMenuState == 'closed') {
             launchMenu();
         } else {
             closeMenu();
@@ -103,3 +103,16 @@
         $('#openMenu div').removeClass("open");
     }
 </script>
+
+<style>
+    @media (max-width: 600px) {
+        .menu {
+            width: 100%;
+        }
+
+        .menuItem {
+            height: 10em;
+            padding: 2em;
+        }
+    }
+</style>

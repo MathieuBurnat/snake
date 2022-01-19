@@ -41,15 +41,23 @@ h1 {
     font-size: 1.8em !important;
     padding: 1em;
 
-    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
+    animation: slideInLeft;
+    animation-duration: 2s;
 }
 
-.text{
+.text-aright{
     padding-left: 3em;
     padding-bottom: 1em;
 
     animation: bounceInRight;
+    animation-duration: 3s;
+}
+
+.text-aleft{
+    padding-left: 3em;
+    padding-bottom: 1em;
+
+    animation: bounceInLeft;
     animation-duration: 3s;
 }
 
