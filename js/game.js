@@ -116,7 +116,7 @@ const spawnApple = () => {
 const beginGame = () => {
     snake.parts = [{x: 3, y: 5}, {x: 2, y: 5}, {x: 1, y: 5}];
     snake.direction = 'right';
-    gameState = "playing";
+    gameState = "gameStartFreeze";
     stats = {
         score: 0,
         applesEaten: 0,
@@ -124,6 +124,9 @@ const beginGame = () => {
     };
     hideMessage();
     spawnApple();
+    setInterval(() => {
+        if(gameState == "gameStartFreeze") gameState = "playing";
+    }, 1333);
 }
 
 const gameOver = () => {
@@ -219,18 +222,8 @@ const init = () => {
     touchButtonDown.alpha = 0.5;
 
 
+    // Draw loop
     app.ticker.add((delta) => {
-        if(gameState != "playing")
-            return;
-
-        lastUpdate += delta;
-        stats.timer += app.ticker.elapsedMS;
-
-        if(lastUpdate > UPDATE_FREQ) {
-            lastUpdate = 0;
-            snake.updatePosition();
-        }
-
         // Draw player
         player.clear();
         for(let [key, part] of Object.entries(snake.parts)) {
@@ -246,6 +239,20 @@ const init = () => {
                 player.drawCircle(part.x * GRID_S + GRID_S / 2, part.y * GRID_S + GRID_S / 2, GRID_S / 2 - partSize);
             }
         }
+    });
+
+    // Update loop
+    app.ticker.add((delta) => {
+        if(gameState != "playing")
+            return;
+
+        lastUpdate += delta;
+        stats.timer += app.ticker.elapsedMS;
+
+        if(lastUpdate > UPDATE_FREQ) {
+            lastUpdate = 0;
+            snake.updatePosition();
+        }
 
         // Update stats display
         timerSpan.innerHTML = Math.floor((stats.timer/1000)/60) + ":" + String(Math.floor((stats.timer/1000)%60)).padStart(2, '0');
@@ -255,12 +262,17 @@ const init = () => {
     document.addEventListener('keydown', (ev) => {
         const directions = {'ArrowRight': 'right', 'ArrowLeft': 'left', 'ArrowUp': 'up', 'ArrowDown': 'down'};
 
-        if(ev.key in directions) 
-            snake.setDirection(directions[ev.key]);
+        if(gameState == "playing") {
+            if(ev.key in directions) 
+                snake.setDirection(directions[ev.key]);
 
-        if(gameState == "playing" && lastUpdate > UPDATE_FREQ*0.66) {
-            snake.updatePosition();
-            lastUpdate = 0;
+            if(lastUpdate > UPDATE_FREQ*0.66) {
+                snake.updatePosition();
+                lastUpdate = 0;
+            }
+        }
+        else if(gameState == "gameStartFreeze") {
+            gameState = "playing";
         }
     });
 
