@@ -37,7 +37,7 @@
     const slideOutAnimation = anime({
         targets: '.menu',
         // Properties 
-        translateX: [400, 0],
+        translateX: ['100%', 0],
         // Property Parameters
         duration: 750,
         easing: 'easeOutQuad',
@@ -48,7 +48,7 @@
     const slideInAnimation = anime({
         targets: '.menu',
         // Properties 
-        translateX: [0, 400],
+        translateX: [0, '100%'],
         // Property Parameters
         duration: 300,
         easing: 'easeInQuad',
