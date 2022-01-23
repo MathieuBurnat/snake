@@ -1,12 +1,12 @@
 <!-- Header -->
 <div class="flex bg-main-content h-16 text-center align-self items-center">
-    <div class="flex-none w-14">
-        Snake
+    <div class="flex-none w-40 font-bold" style="font-size: x-large" id="title">
+        The Snake
     </div>
     <div class="grow">
         <a href="?page=play" id="play-button" class="rounded-md bg-button px-8 py-1">Play</a>
     </div>
-    <div class="flex-none w-14" id="openMenu">
+    <div class="flex-none w-40" id="openMenu">
         <div id="burger">
             <span></span>
             <span></span>
@@ -123,4 +123,8 @@
             padding: 2em;
         }
     }
+
+    #title {
+        animation: pulse 2s infinite;
+}
 </style>
