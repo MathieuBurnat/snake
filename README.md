@@ -9,3 +9,9 @@ Snake Snake Snake (But everything's animated)
 ```
 php -S localhost:8000
 ```
+
+3) Install depedences
+```
+npm i
+```
+4) Have Fun ! :D
