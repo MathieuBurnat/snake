@@ -88,7 +88,9 @@
                     stroke-width="1px" fill="none" />
             </g>
         </g>
-    </svg <div class="text-aright" style="padding-bottom: 10em;">
+    </svg>
+    
+    <div class="text-aright" style="padding-bottom: 10em;">
     <p> Pour commencer à jouer, cliquez simplement sur le bouton Play. Il vous suffira d'appuyer sur les touches
         directionnelles ⬅️ ➡️ ⬇️ ⬆️ afin de faire bouger votre serpent 🐍. Avez-vous compris ? Parfait !
         Maintenant essayez de manger la pomme ! 🍎
