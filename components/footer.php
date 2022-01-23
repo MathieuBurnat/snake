@@ -1,9 +1,9 @@
 <div class="flex bottom-0 fixed h-16 bg-secondary-content w-full text-center items-center">
     <div class="flex-none w-40">
-        <span class="text-xs">Release-1.</span><span class="versionNumber text-xs">1</span>
+        <span class="text-xs italic">Release-1.</span><span class="versionNumber text-xs italic">1</span>
     </div>
     <div class="grow">
-        <p class="text-xs">Info</p>
+        <p class="text-sm">Made with ❤️</p>
     </div>
     <div class="flex-none w-40" id="flame">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -24,12 +24,15 @@
 </style>
 
 <script>
+    // Get the versionNumber
     var objPropLogEl = document.querySelector('.versionNumber');
 
+    // create our object
     var myObject = {
         number: 0
     }
 
+    // increase our object by 26 and update it
     anime({
         targets: myObject,
         number: 26,
