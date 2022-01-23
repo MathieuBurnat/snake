@@ -1,6 +1,6 @@
 <div class="flex bottom-0 fixed h-16 bg-secondary-content w-full text-center items-center">
     <div class="flex-none w-40">
-        <span class="text-xs">Version : Beta-</span><span class="versionNumber text-xs">1</span>
+        <span class="text-xs">Release-1.</span><span class="versionNumber text-xs">1</span>
     </div>
     <div class="grow">
         <p class="text-xs">Info</p>
@@ -32,7 +32,7 @@
 
     anime({
         targets: myObject,
-        number: 25,
+        number: 26,
         easing: 'linear',
         round: 1,
 
