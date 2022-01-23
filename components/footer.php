@@ -1,6 +1,6 @@
 <div class="flex bottom-0 fixed h-16 bg-secondary-content w-full text-center items-center">
-    <div class="flex-none w-14">
-        <p class="text-xs">Beta 0.1</p>
+    <div class="flex-none w-40">
+        <span class="text-xs">Version : Beta-</span><span class="versionNumber text-xs">1</span>
     </div>
     <div class="grow">
         <p class="text-xs">Info</p>
@@ -13,10 +13,31 @@
                     clip-rule="evenodd" />
         </svg>
     </div>
-</div><style>
+</div>
+
+<style>
     #flame {
         animation: bounce 2s;
         animation-delay: 5s;
         animation-iteration-count: 3;
     }
 </style>
+
+<script>
+    var objPropLogEl = document.querySelector('.versionNumber');
+
+    var myObject = {
+        number: 0
+    }
+
+    anime({
+        targets: myObject,
+        number: 25,
+        easing: 'linear',
+        round: 1,
+
+        update: function () {
+            objPropLogEl.innerHTML = JSON.stringify(myObject.number);
+        }
+    });
+</script>

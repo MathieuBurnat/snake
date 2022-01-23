@@ -8,6 +8,7 @@
     <script src="libs/jquery.min.js"></script>
     <script src="libs/anime.min.js"></script>
     <script src="libs/pixi.min.js"></script>
+    <script src="node_modules/animejs/lib/anime.js"></script>
     <link rel="stylesheet" href="libs/animate.min.css"/>
 </head>
 <link href="styles/main.css" rel="stylesheet" type="text/css" />
