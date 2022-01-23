@@ -5,6 +5,9 @@ body {
     overflow-x: clip;
 }
 
+p{
+    font-size: 1.3em;
+}
 
 /* Background Body */
 
