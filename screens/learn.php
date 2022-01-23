@@ -1,4 +1,4 @@
-<div class="flex flex-wrap w-auto">
+<div class="flex flex-wrap w-auto content-center justify-center	">
     <h1>How to play's section</h1>
 
     <div class="text-aleft">
@@ -48,52 +48,75 @@
 
     <div class="text-aright">
         <p> Pour commencer à jouer, cliquez simplement sur le bouton Play. Il vous suffira d'appuyer sur les touches
-            directionnelles ⬅️ ➡️ ⬇️ ⬆️ afin de faire bouger votre serpent 🐍. Avez-vous compris ? Parfait !
-            Maintenant essayez de manger la pomme ! 🍎
+            directionnelles ⬅️ ➡️ ⬇️ ⬆️ afin de faire bouger votre serpent 🐍.
         </p>
     </div>
 
-    <svg class="m-auto" style="width: 15%; height: 15%;  margin-top: 2em; margin-bottom: 2em;" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
-        xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink"
-        xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg"
-        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns1="http://sozi.baierouge.fr"
-        id="svg2" viewBox="0 0 442.23 482.04" version="1.1">
-        <defs id="defs4">
-            <linearGradient id="linearGradient5419" y2="230.38" gradientUnits="userSpaceOnUse" x2="343.82" y1="677.87"
-                x1="435.95">
-                <stop id="stop5383" stop-color="#8c3611" offset="0" />
-                <stop id="stop5385" stop-color="#ec081a" offset="1" />
-            </linearGradient>
-            <linearGradient id="linearGradient5421" y2="233.98" gradientUnits="userSpaceOnUse" x2="452.54" y1="347.11"
-                x1="409.12">
-                <stop id="stop5393" stop-color="#703f06" offset="0" />
-                <stop id="stop5395" stop-color="#621e00" offset="1" />
-            </linearGradient>
-            <linearGradient id="linearGradient5423" y2="201.36" gradientUnits="userSpaceOnUse" x2="158.59" y1="288.23"
-                x1="351.64">
-                <stop id="stop5403" stop-color="#38822b" offset="0" />
-                <stop id="stop5405" stop-color="#00ce02" stop-opacity="0" offset="1" />
-            </linearGradient>
-        </defs>
-        <g id="layer1" transform="translate(-185.44 -156.02)">
-            <g id="g5413" transform="translate(4.0406 -68.69)">
-                <path id="path3054" fill="url(#linearGradient5419)"
-                    d="m404.25 693.33c205.07 93.329 322.49-370.73 92.036-351.88-52.37 12.89-118.11 23.937-187.14 1.6726-242.8-24.351-95.055 436.5 95.1 350.21z" />
-                <path id="path3064" fill="url(#linearGradient5421)"
-                    d="m426.79 265.96c-8.1595-24.063-9.0009-33.491-5.0508-33.335 23.513-4.567 32.962 10.557 43.437 24.244-14.542 0.5411-19.918 6.3201-25.254 12.122-17.628 32.357-19.297 56.634-26.264 82.327l-27.274 2.0203c20.262-19.774 29.904-59.692 40.406-87.378z" />
-                <path id="path3066" fill="url(#linearGradient5423)"
-                    d="m410.12 307.88c-17.615-70.003-86.197-92.056-140.92-78.287-92.792 23.349 71.872 94.905 140.92 78.287z" />
-                <path id="path3070" d="m390.93 294.24c-60.97-42.23-91.1-45.32-135.36-48.48" stroke="#3bae28"
-                    stroke-width="1px" fill="none" />
+    <div style="width: 100%; height: 50%">
+        <svg class="m-auto" style="width: 15%; height: 50%;  margin-top: 2em; margin-bottom: 2em;" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
+            xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg"
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:ns1="http://sozi.baierouge.fr"
+            id="svg2" viewBox="0 0 442.23 482.04" version="1.1">
+            <defs id="defs4">
+                <linearGradient id="linearGradient5419" y2="230.38" gradientUnits="userSpaceOnUse" x2="343.82" y1="677.87"
+                    x1="435.95">
+                    <stop id="stop5383" stop-color="#8c3611" offset="0" />
+                    <stop id="stop5385" stop-color="#ec081a" offset="1" />
+                </linearGradient>
+                <linearGradient id="linearGradient5421" y2="233.98" gradientUnits="userSpaceOnUse" x2="452.54" y1="347.11"
+                    x1="409.12">
+                    <stop id="stop5393" stop-color="#703f06" offset="0" />
+                    <stop id="stop5395" stop-color="#621e00" offset="1" />
+                </linearGradient>
+                <linearGradient id="linearGradient5423" y2="201.36" gradientUnits="userSpaceOnUse" x2="158.59" y1="288.23"
+                    x1="351.64">
+                    <stop id="stop5403" stop-color="#38822b" offset="0" />
+                    <stop id="stop5405" stop-color="#00ce02" stop-opacity="0" offset="1" />
+                </linearGradient>
+            </defs>
+            <g id="layer1" transform="translate(-185.44 -156.02)">
+                <g id="g5413" transform="translate(4.0406 -68.69)">
+                    <path id="path3054" fill="url(#linearGradient5419)"
+                        d="m404.25 693.33c205.07 93.329 322.49-370.73 92.036-351.88-52.37 12.89-118.11 23.937-187.14 1.6726-242.8-24.351-95.055 436.5 95.1 350.21z" />
+                    <path id="path3064" fill="url(#linearGradient5421)"
+                        d="m426.79 265.96c-8.1595-24.063-9.0009-33.491-5.0508-33.335 23.513-4.567 32.962 10.557 43.437 24.244-14.542 0.5411-19.918 6.3201-25.254 12.122-17.628 32.357-19.297 56.634-26.264 82.327l-27.274 2.0203c20.262-19.774 29.904-59.692 40.406-87.378z" />
+                    <path id="path3066" fill="url(#linearGradient5423)"
+                        d="m410.12 307.88c-17.615-70.003-86.197-92.056-140.92-78.287-92.792 23.349 71.872 94.905 140.92 78.287z" />
+                    <path id="path3070" d="m390.93 294.24c-60.97-42.23-91.1-45.32-135.36-48.48" stroke="#3bae28"
+                        stroke-width="1px" fill="none" />
+                </g>
             </g>
-        </g>
-    </svg>
+        </svg>
+    </div>
+
     
-    <div class="text-aright" style="padding-bottom: 10em;">
-    <p> Pour commencer à jouer, cliquez simplement sur le bouton Play. Il vous suffira d'appuyer sur les touches
-        directionnelles ⬅️ ➡️ ⬇️ ⬆️ afin de faire bouger votre serpent 🐍. Avez-vous compris ? Parfait !
-        Maintenant essayez de manger la pomme ! 🍎
+    <div class="text-aleft" style="padding-bottom: 5em; width: 100%; text-align: center;">
+    <p> 
+        Une fois votre serpent 🐍 déplacé, essayez de manger la pomme ! 🍎
+    </p>
+
+    <div style="width: 100%; height: 20%">
+        <svg class="m-auto" style="width: 50%; height: 100%; margin-top: 5em;" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 547.6 672.41" version="1.1">
+            <path id="path3762" stroke="#000" stroke-width="1px" d="m62.089 601.57-53.538-36.63 22.14 54.34-30.191-16.5 32.606 40.66-27.776-12.48s16.076 29.143 30.191 35.826c8.7325 4.1348 19.465 2.0656 28.983 0.40254 14.264-2.4923 26.28-17.02 40.657-15.297 10.642 1.2755 16.353 14.867 26.568 18.114 7.4178 2.3584 15.872 2.571 23.347 0.40254 5.8617-1.7004 9.2978-8.9384 15.297-10.064 7.553-1.4166 15.094 6.7226 22.542 4.8305 7.194-1.8275 9.4889-14.229 16.907-14.492 9.682-0.34223 14.043 14.609 23.347 17.309 5.2975 1.5374 11.365 0.79624 16.504-1.2076 9.2544-3.6084 13.678-16.245 23.347-18.517 4.4065-1.0352 8.912 1.6449 13.284 2.8178 6.2704 1.6823 12.144 7.2752 18.517 6.0381 8.6014-1.6696 11.855-14.019 20.127-16.907 4.6891-1.6367 10.02-0.55199 14.894 0.40255 15.335 3.0033 28.283 17.504 43.877 16.504 7.4278-0.47626 12.399-9.1508 19.725-10.466 7.9943-1.4352 16.254 1.3299 24.153 3.2203 10.648 2.5483 20.175 12.539 30.996 10.869 7.2936-1.1256 10.35-13.807 17.712-13.284 7.9499 0.56498 9.8393 13.223 16.907 16.907 7.4924 3.9053 17.546 8.4843 24.958 4.428 8.2847-4.5341 6.5723-17.755 10.869-26.165 5.0147-9.8166 14.602-17.492 17.309-28.178 1.8155-7.1645-0.0693-14.837-1.2076-22.14-2.05-13.152-10.064-38.644-10.064-38.644l-0.40255 40.657s-11.945-13.536-15.297-21.737c-3.4466-8.4334 0.71082-19.447-4.428-26.97-14.252-20.864-65.212-38.644-65.212-38.644z"/>
+            <path id="path3784" d="m64.292 150.37c-12.954-6.38 42.568-5.13 46.718-19.36 4.69-16.13-30.029-22.71-25.393-27.76 56.903-62.036 203.87-177.79 388.89-8.885l2.0811 31.91 15.261 19.424 15.261 53.415-0.6937 130.42-11.793 31.91 13.18 15.261v196.32" stroke="#000" stroke-linecap="square" stroke-miterlimit="36" stroke-width="13.1" fill="none"/>
+            <path id="path2987" stroke-linejoin="bevel" d="m56.051 634.98-9.661-313.98 31.801-4.8305-28.178-17.309 0.40254-99.831s7.7399-21.539 8.8784-22.678c1.1386-1.1386-1.4232-25.618-1.4232-25.618l35.58-3.131-12.524-39.565c171.51-171.43 325.13-80.088 389.95-8.531l1.1386 28.179 17.078 17.078 15.94 52.658-1.4232 130.93-11.955 32.449 13.663 13.378-1.7078 235.4-29.887 29.887z" stroke="#000" stroke-width="6" fill="#e5e5e5"/>
+            <path id="path3757" stroke="#000" stroke-width="13.1" fill="none" d="m341.34 23.049 85.046 78.968 10.466 28.983 27.373 63.602 2.4152 145.72-11.149 24.366 12.881 21.737 0.80509 252.8"/>
+            <path id="path3760" stroke="#000" stroke-width="1px" d="m323.87 15.308s-13.29 25.547-28.706 32.769c-23.467 4.8068-52.07 1.368-79.703 2.4153-10.247 0.38833-24.753-1.3276-34.216 4.0254-10.238 5.7917-17.309 26.568-17.309 26.568s14.408-18.894 24.958-22.945c12.277-4.7137 39.449 0.40255 39.449 0.40255l-27.373 30.593s-14.108 21.939-18.517 22.945c-7.0256 1.6021-30.134-2.3642-38.644-2.8178-9.5166 4.5782-20.127 12.881-20.127 12.881l26.568-6.4407 16.907 5.6356s-15.86 14.784-20.932 24.153c-4.6506 8.5904-8.0508 28.178-8.0508 28.178s8.6523-19.896 14.492-28.983c5.7776-8.9911 20.127-24.958 20.127-24.958s10.134 0.5417 14.492-1.6102c7.9988-3.9497 18.517-19.322 18.517-19.322s1.4353 20.082 5.6356 28.983c5.939 12.585 26.568 32.203 26.568 32.203l4.8305 21.737 0.80509-29.788 18.517 0.80508-33.008-12.076c-12.047-11.343-16.114-30.001-15.297-53.136 0 0 19.439-6.9402 24.958-16.504 1.8825-3.2625 4.0254-9.2585 4.0254-9.2585s43.43-0.40828 59.576-4.8305c12.523-8.8502 41.902-36.914 41.902-36.914z"/>
+            <path id="path3764" d="m155.11 201.75c-13.795 0.10289-26.906 1.4062-26.906 1.4062-29.184-1.1043-20.131 18.414-9.8125 18.625l24.031 0.5 1.4687 65.719c-0.5434 8.5095 12.459 20.575 18.156 6.375l1.9687-26.469c19.102 4.7553 27.027 18.712 35.312 32.375 9.36 5.3627 19.337 11.718 17.656-10.812l-20.594-28.438c15.961-16.426 16.786-49.853-18.406-57.625-6.077-1.342-14.598-1.718-22.875-1.6562zm16.344 21.219c5.644-0.10487 11.911 5.1038 15.844 17.719-9.3959 1.0292-18.792 2.7249-28.188 0 0.3741-10.659 5.9472-17.6 12.344-17.719z"/>
+            <path id="path3766" d="m260.39 205.6c9.2185 2.0748 12.584 14.034 16.432 27.96l-0.4905 61.805c-6.3767 2.759-12.753 2.7906-19.13 0l0.4905-66.71c-0.2581-3.2318-6.173-7.0032-6.1314-14.47 0.016-2.7964 2.6066-9.9846 8.8293-8.5841z"/>
+            <path id="path3768" d="m323.42 203.62c-30.265-0.31858-20.446 22.48-19.625 22.594 7.0287 0.97304 20.658 0.60806 20.625 0.96875-2.0319 22.431 1.8967 53.691 2.4374 67.688 0.4135 10.701 18.302 13.106 19.125 4.4062 0.5348-5.6552 0-31.875 0-31.875l19.625-3.4375c28.906-6.6551 26.723-59.609 4.4063-59.844zm22.5 20.969c32.063-0.31964 27.86 23.789-3.0938 25.125-2.8508-7.5382-1.7604-16.202-0.094-25.031 1.1102-0.0627 2.1533-0.0834 3.1876-0.0937z"/>
+            <path id="path3776" stroke="#000" stroke-width="1px" d="m63.845 636.49c1.0406-1.7342 20.117-46.131 20.117-46.131l4.1622 24.279 12.14-9.3649 2.0811 31.563z"/>
+            <path id="path3778" stroke="#000" stroke-width="1px" d="m238.31 636.14c1.0406-3.1216 11.099-41.275 11.099-41.275l9.0181 44.397z"/>
+            <path id="path3780" stroke="#000" stroke-width="1px" d="m312.86 636.63 40.717-64.18 6.6352 51.346 20.83-23.883 8.6538 19.778 12.479 3.1331 37.244 3.8706 26.241-26.488 3.2593 39.976z"/>
+            <path id="path3782" stroke="#000" stroke-width="1px" d="m167.21 642.39 10.484-66.636 18.652 62.474z"/>
+          </svg>
+    </div>
+
+    <div class="text-aleft" style="padding-bottom: 5em; width: 100%; text-align: center;">
+    <p> 
+        Mais attention... si vous vous mordez la queue 🐍, vous perdez 😬 !
     </p>
 </div>
 
