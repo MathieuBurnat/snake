@@ -13,4 +13,10 @@
                     clip-rule="evenodd" />
         </svg>
     </div>
-</div>
+</div><style>
+    #flame {
+        animation: bounce 2s;
+        animation-delay: 5s;
+        animation-iteration-count: 3;
+    }
+</style>
