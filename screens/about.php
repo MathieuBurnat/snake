@@ -48,9 +48,7 @@
           <div class="flip-card-back">
             <h1>Mathieu B</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, dolor asperiores voluptate
-              doloremque a dignissimos quos, aut expedita accusantium impedit ducimus tempora! Fuga modi architecto
-              eligendi. Nostrum, debitis cum! A.</p>
-            <p>Architect & Engineer</p>
+              doloremque a dignissimos quos, aut expedita accusantium impedit ducimus tempora! Fuga modi Architect & Engineer</p>
           </div>
         </div>
       </div>
