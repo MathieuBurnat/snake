@@ -38,6 +38,7 @@
         number: 26,
         easing: 'linear',
         round: 1,
+        duration: 2000,
 
         update: function () {
             objPropLogEl.innerHTML = JSON.stringify(myObject.number);
