@@ -13,27 +13,31 @@
 
 </div>
 
-<h1 class="animate__animated animate__bounce">Scroll magic tests</h1>
+<h1 class="animate__bounce">Scroll magic tests</h1>
 
 
-<div class="wow animate__animated animate__bounceInLeft">
+<div class="wow animate__bounceInLeft">
     Content to Reveal Here
 </div>
 
-<div class="wow card animate__animated animate__bounceInLeft" style="background-color: darkmagenta;">
+<div class="wow card" id="test" style="background-color: darkmagenta;">
     Magenta
 </div>
 
-<div class="wow card animate__animated animate__bounceInLeft" style="background-color: darkgreen;">
+<div class="wow card animate__bounceInLeft" style="background-color: darkgreen;">
     Green
 </div>
 
-<div class="wow card animate__animated animate__bounceInLeft" style="background-color: cyan;">
+<div class="wow card animate__bounceInLeft" style="background-color: cyan;">
     Cyan
 </div>
 
 <style>
 
+    #test{
+        animation-name: bounceInRight;
+    }
+    
     .card {
         margin: auto;
         padding: 40em;
