@@ -116,6 +116,10 @@ style="width: 20%; height: 20%;     margin-top: 2em; margin-bottom: 2em;" xmlns=
     <p class="text-center"> 
         Mais attention... si vous vous mordez la queue 🐍, vous perdez 😬 !
     </p>
+
+    <p class="text-center" style="margin-top: 3em"> 
+       Êtes-vous prêt à tenter l'expérience ? cliquez <a class="text-teal-600" href="?page=play">ici</a> 🐍!
+    </p>
 </div>
 
 
