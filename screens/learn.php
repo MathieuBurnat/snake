@@ -1,4 +1,4 @@
-<h1 class="text-center"> Comment jouer ? 🎮</h1>
+<h1 class="text-center animate__shakeX"> Comment jouer ? 🎮</h1>
 
 <div class="text-aleft text-center" style="margin-bottom: 10em;">
     <p> Dans cette section, vous allez apprendre à jouer au snake. Serrez-vous le prochain champion ? 🖱️</p>
@@ -48,8 +48,8 @@ style="width: 20%; height: 20%;     margin-top: 2em; margin-bottom: 2em;" xmlns=
 
 
 <!-- Explain : Eat the apple ! -->
-<div class="wow m-auto" id="test" style="width: 100%; height: 50%; margin-top: 5em;">
-    <svg class="m-auto wow" id="test"style="width: 15%; height: 50%;  margin-top: 2em; margin-bottom: 2em;" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
+<div class="wow m-auto card" style="width: 100%; height: 50%; margin-top: 5em;">
+    <svg class="m-auto wow" id="card"style="width: 15%; height: 50%;  margin-top: 2em; margin-bottom: 2em;" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg"
         xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink"
         xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg"
         xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -87,7 +87,7 @@ style="width: 20%; height: 20%;     margin-top: 2em; margin-bottom: 2em;" xmlns=
     </svg>
 </div>
 
-<div class="wow testLeft" style="margin-bottom: 20em;">
+<div class="wow card" style="margin-bottom: 20em;">
     <p class="text-center"> 
         Une fois votre serpent 🐍 déplacé, essayez de manger la pomme ! 🍎
     </p>
@@ -95,7 +95,7 @@ style="width: 20%; height: 20%;     margin-top: 2em; margin-bottom: 2em;" xmlns=
 
 
 <!-- Explain : Death possibilities -->
-<div class="wow m-auto" id="test" style="width: 30%; height: 20%">
+<div class="wow m-auto cardLeft" style="width: 30%; height: 20%">
     <svg class="m-auto" style="width: 50%; height: 100%; margin-top: 5em;" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 547.6 672.41" version="1.1">
         <path id="path3762" stroke="#000" stroke-width="1px" d="m62.089 601.57-53.538-36.63 22.14 54.34-30.191-16.5 32.606 40.66-27.776-12.48s16.076 29.143 30.191 35.826c8.7325 4.1348 19.465 2.0656 28.983 0.40254 14.264-2.4923 26.28-17.02 40.657-15.297 10.642 1.2755 16.353 14.867 26.568 18.114 7.4178 2.3584 15.872 2.571 23.347 0.40254 5.8617-1.7004 9.2978-8.9384 15.297-10.064 7.553-1.4166 15.094 6.7226 22.542 4.8305 7.194-1.8275 9.4889-14.229 16.907-14.492 9.682-0.34223 14.043 14.609 23.347 17.309 5.2975 1.5374 11.365 0.79624 16.504-1.2076 9.2544-3.6084 13.678-16.245 23.347-18.517 4.4065-1.0352 8.912 1.6449 13.284 2.8178 6.2704 1.6823 12.144 7.2752 18.517 6.0381 8.6014-1.6696 11.855-14.019 20.127-16.907 4.6891-1.6367 10.02-0.55199 14.894 0.40255 15.335 3.0033 28.283 17.504 43.877 16.504 7.4278-0.47626 12.399-9.1508 19.725-10.466 7.9943-1.4352 16.254 1.3299 24.153 3.2203 10.648 2.5483 20.175 12.539 30.996 10.869 7.2936-1.1256 10.35-13.807 17.712-13.284 7.9499 0.56498 9.8393 13.223 16.907 16.907 7.4924 3.9053 17.546 8.4843 24.958 4.428 8.2847-4.5341 6.5723-17.755 10.869-26.165 5.0147-9.8166 14.602-17.492 17.309-28.178 1.8155-7.1645-0.0693-14.837-1.2076-22.14-2.05-13.152-10.064-38.644-10.064-38.644l-0.40255 40.657s-11.945-13.536-15.297-21.737c-3.4466-8.4334 0.71082-19.447-4.428-26.97-14.252-20.864-65.212-38.644-65.212-38.644z"/>
         <path id="path3784" d="m64.292 150.37c-12.954-6.38 42.568-5.13 46.718-19.36 4.69-16.13-30.029-22.71-25.393-27.76 56.903-62.036 203.87-177.79 388.89-8.885l2.0811 31.91 15.261 19.424 15.261 53.415-0.6937 130.42-11.793 31.91 13.18 15.261v196.32" stroke="#000" stroke-linecap="square" stroke-miterlimit="36" stroke-width="13.1" fill="none"/>
@@ -112,7 +112,7 @@ style="width: 20%; height: 20%;     margin-top: 2em; margin-bottom: 2em;" xmlns=
       </svg>
 </div>
 
-<div class="wow testLeft" style="margin-bottom: 20em;">
+<div class="wow cardLeft" style="margin-bottom: 20em;">
     <p class="text-center"> 
         Mais attention... si vous vous mordez la queue 🐍, vous perdez 😬 !
     </p>
@@ -121,26 +121,16 @@ style="width: 20%; height: 20%;     margin-top: 2em; margin-bottom: 2em;" xmlns=
 
 <style>
 
-    #test{
+    .card{
         animation-name: bounceInRight;
-        animation-duration: 3s;
+        animation-duration: 2s;
     }
 
-    .testLeft{
+    .cardLeft{
         animation-name: bounceInLeft;
-        animation-duration: 3s;
+        animation-duration: 2s;
     }
     
-    .card {
-        margin: auto;
-        padding: 40em;
-        text-align: center;
-        font-size: larger;
-        font-weight: bold;
-
-        animation-duration: 3s;
-    }
-
     #k-left {
         animation: rotateInDownRight;
         animation-duration: 1s;
