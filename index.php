@@ -11,6 +11,8 @@
     <script src="node_modules/animejs/lib/anime.js"></script>
     <link rel="stylesheet" href="libs/animate.min.css" />
 
+    <link rel="manifest" href="/manifest.json">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 
     <script>
@@ -45,4 +47,9 @@
 <!-- Include the footer -->
 <?php include("./components/footer.php"); ?>
 
+<script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js', {scope: '.'});
+}
+</script>
 </html>

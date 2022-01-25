@@ -1,0 +1,45 @@
+{
+    "short_name": "Snake",
+    "name": "Play Snake",
+    "id" : "snake",
+    "icons": [
+      {
+        "src": "/assets/cute-snake.svg",
+        "type": "image/svg+xml",
+        "sizes": "150x150"
+      },
+      {
+        "src": "/assets/cute-snake-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/assets/cute-snake-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/pwa.html",
+    "background_color": "#3367D6",
+    "display": "standalone",
+    "scope": ".",
+    "theme_color": "#3367D6",
+    "description": "How about a game of snake?",
+    "screenshots": [
+      {
+        "src": "/assets/screenshot1.png",
+        "type": "image/png",
+        "sizes": "600x600"
+      },
+      {
+        "src": "/assets/screenshot2.png",
+        "type": "image/png",
+        "sizes": "600x600"
+      },
+      {
+        "src": "/assets/screenshot3.png",
+        "type": "image/png",
+        "sizes": "600x600"
+      }
+    ]
+  }

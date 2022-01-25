@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8080/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Snake</title>
+    <script src="libs/tailwind.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/anime.min.js"></script>
+    <script src="libs/pixi.min.js"></script>
+    <script src="node_modules/animejs/lib/anime.js"></script>
+    <link rel="stylesheet" href="libs/animate.min.css" />
+
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+    <script>
+        new WOW().init();
+    </script>
+<link href="styles/main.css" rel="stylesheet" type="text/css"><style>/* ! tailwindcss v3.0.12 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.fixed{position:fixed}.bottom-0{bottom:0px}.z-50{z-index:50}.float-right{float:right}.m-auto{margin:auto}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.flex{display:flex}.h-16{height:4rem}.h-screen{height:100vh}.h-5{height:1.25rem}.w-40{width:10rem}.w-80{width:20rem}.w-fit{width:-moz-fit-content;width:fit-content}.w-full{width:100%}.w-5{width:1.25rem}.flex-none{flex:none}.flex-1{flex:1 1 0%}.grow{flex-grow:1}.items-center{align-items:center}.overflow-hidden{overflow:hidden}.rounded-md{border-radius:0.375rem}.rounded-l-lg{border-top-left-radius:0.5rem;border-bottom-left-radius:0.5rem}.p-6{padding:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.text-center{text-align:center}.text-right{text-align:right}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-bold{font-weight:700}.italic{font-style:italic}</style></head>
+
+
+<body class="bg-body">
+    <!-- Include the header -->
+    <!-- Header -->
+<div class="flex bg-main-content h-16 text-center align-self items-center">
+    <div class="flex-none w-40 font-bold" style="font-size: x-large" id="title">
+        The Snake
+    </div>
+    <div class="grow">
+        <a href="#" id="play-button" class="rounded-md bg-button px-8 py-1">Play</a>
+    </div>
+    <div class="flex-none w-40 font-bold" style="font-size: x-large" id="title">
+    </div>
+</div>
+
+
+<script>
+    const slideOutAnimation = anime({
+        targets: '.menu',
+        // Properties 
+        translateX: ['100%', 0],
+        // Property Parameters
+        duration: 750,
+        easing: 'easeOutQuad',
+        // Animation Parameters
+        direction: ''
+    });
+    slideOutAnimation.reverse();
+
+    const slideInAnimation = anime({
+        targets: '.menu',
+        // Properties 
+        translateX: [0, '100%'],
+        // Property Parameters
+        duration: 300,
+        easing: 'easeInQuad',
+        // Animation Parameters
+        direction: ''
+    });
+    slideInAnimation.reverse();
+
+    anime({
+        targets: '.menu',
+        translateX: [0, '100%'],
+        duration: 1,
+    });
+
+    let sideMenuState = "closed";
+
+    $('#openMenu').click(toggleLaunchMenu);
+    $('body').click((evt) => {
+        if (evt.target.id != "openMenu" && $(evt.target).closest('#openMenu').length == 0
+            && evt.target.id != "sideMenu" && $(evt.target).closest('#sideMenu').length == 0
+            && sideMenuState == "open")
+            closeMenu();
+    });
+
+    function toggleLaunchMenu() {
+        if (sideMenuState == 'closed') {
+            launchMenu();
+        } else {
+            closeMenu();
+        }
+    }
+
+    function launchMenu() {
+        /* Add typewriter effect */
+        var items = document.getElementsByClassName('menuItem');
+        for (var i = 0; i < items.length; i++) {
+            items[i].classList.add("typewriter");
+        }
+
+        anime({
+            targets: '.menu',
+            opacity: 1,
+            duration: 100,
+        });
+
+        slideInAnimation.pause();
+        slideOutAnimation.restart();
+        sideMenuState = 'open';
+        $('#openMenu div').addClass("open");
+    }
+
+    function closeMenu() {
+        $('#openMenu').css("opacity", "1");
+
+        slideOutAnimation.pause();
+        slideInAnimation.restart();
+
+        sideMenuState = 'closed';
+        $('#openMenu div').removeClass("open");
+    }
+</script>
+
+<style>
+    @media (max-width: 768px) {
+        .menu {
+            width: 100%;
+        }
+
+        .menuItem {
+            height: 10em;
+            padding: 2em;
+        }
+    }
+
+    #title {
+        animation: pulse 2s infinite;
+}
+</style>
+    <div id="gameSection" class="w-fit m-auto overflow-hidden ">
+    <div class="flex text-3xl my-2">
+        <span class="flex-1">Apples: <span id="stats-apples">0</span></span>
+        <span class="flex-1 text-right">Timer : <span id="stats-timer">0:00</span></span>
+    </div>
+    <script src="js/game.js"></script>
+</div>
+
+
+
+
+
+
+<!-- Include the footer -->
+<div class="flex bottom-0 fixed h-16 bg-secondary-content w-full text-center items-center">
+    <div class="flex-none w-40">
+        <span class="text-xs italic">Release-1.</span><span class="versionNumber text-xs italic">26</span>
+    </div>
+    <div class="grow">
+        <p class="text-sm">Made with ❤️</p>
+    </div>
+    <div class="flex-none w-40" id="flame">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <a href="https://github.com/MathieuBurnat/snake" target="_blank">
+                <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
+        </a></svg>
+    </div>
+</div>
+
+<style>
+    #flame {
+        animation: bounce 2s;
+        animation-delay: 5s;
+        animation-iteration-count: 3;
+    }
+</style>
+
+<script>
+    // Get the versionNumber
+    var objPropLogEl = document.querySelector('.versionNumber');
+
+    // create our object
+    var myObject = {
+        number: 0
+    }
+
+    // increase our object by 26 and update it
+    anime({
+        targets: myObject,
+        number: 26,
+        easing: 'linear',
+        round: 1,
+        duration: 2000,
+
+        update: function () {
+            objPropLogEl.innerHTML = JSON.stringify(myObject.number);
+        }
+    });
+</script>
+<script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+</body></html>
