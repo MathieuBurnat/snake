@@ -183,3 +183,15 @@ h1 {
     top: 39px;
     left: 8px;
 }
+
+/* 
+Hack to have game screen fill screen on mobile, 
+*/
+#gameSection {
+    transform: translateY(25vh) scale(1.5);
+}
+@media only screen and (orientation: landscape) {
+    #gameSection {
+        transform: none;
+    }
+}
