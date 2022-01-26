@@ -49,5 +49,14 @@
 if('serviceWorker' in navigator) {
   navigator.serviceWorker.register('service-worker.js', {scope: '.'});
 }
+
+window.addEventListener('resize', function(event) {
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+        window.location.href = 'pwa.html';
+    }
+}, true);
+
+
+
 </script>
 </html>
