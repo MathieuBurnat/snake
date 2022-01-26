@@ -19,6 +19,8 @@ const RUNTIME = 'runtime';
 
 // A list of local resources we always want to be cached.
 const PRECACHE_URLS = [
+    'pwa.html',
+
     'assets/apple.png',
     'assets/apple.svg',
     'assets/arrows.svg',
@@ -64,15 +66,11 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', function(event) {
-    event.respondWith(async function() {
-       try{
-         var res = await fetch(event.request);
-         var cache = await caches.open('cache');
-         cache.put(event.request.url, res.clone());
-         return res;
-       }
-       catch(error){
-         return caches.match(event.request);
-        }
-      }());
-  });
+ console.log(event.request.url);
+
+ event.respondWith(
+   caches.match(event.request).then(function(response) {
+     return response || fetch(event.request);
+   })
+ );
+});

@@ -1,5 +1,5 @@
 @import "./variables.css";
-@import "../node_modules/animate.css/animate.css";
+@import "../libs/animate.min.css";
 
 body {
     overflow-x: clip;
